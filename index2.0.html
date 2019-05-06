@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/style2.0.css">
+    <link rel="icon" type="image/png" href="favicon.ico" sizes="32x32" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title>BEOGRADSKI RATNIK</title>
+
+</head>
+
+<body>
+    <div id="header">
+        <div id="logo">
+            <img src="image/medalja.jpeg" id="logoSlika" alt="">
+        </div>
+        <div id="text">
+            <p>Trofej</p>
+            <p>BEOGRADSKI RATNIK</p>
+        </div>
+        <div id="prijava">
+            <button id="myBtn1">PRIJAVA</button>
+        </div>
+        <div id="himna">
+            <p>Himna</p>
+            <audio controls autoplay>
+                <source src="audio/ratnik.mp3" type="audio/mpeg">
+
+            </audio>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="#home">Početna</a></li>
+                <li><a href="#about">O nama</a></li>
+                <li><a href="#gallery">Galerija</a></li>
+                <li><a href="#competitors">Takmičari</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <div id="home" class="content">
+                <div id="left" class="item2"><span><strong>O nama</strong></span>
+                    <p>Ove godine po drugi se organizuje Otvoreno Prvenstvo Beograda 2018. god, iz WUSHU Kung Fu sporta,
+                        trofej Beogradski ratnik 2018. Takmičenje se odvija u SANDA borbama u Full i Light kategorijama
+                        za seniore, juniore, kadete, starije i mlađe pionire u muškoj i ženskoj konkurenciji.</p>
+
+                </div>
+                <div id="right" class="item3"><span><strong>Video</strong></span><br>
+
+                    <video width="320" height="200" controls>
+                        <source src="video/video1.mp4" type="video/mp4">
+
+
+                    </video>
+                </div>
+
+                <div id="bottom" class="item4">
+                    <span>Galerija</span><br>
+
+                    <div id="malaGalerija">
+                        <div class="prvi">
+
+                            <img id="myImg" src="image/2.jpg" alt="Organizatori sa I sekretarom Kineske Ambasade">
+
+                        </div>
+                        <div class="drugi">
+
+                            <img id="myImg2" src="image/28.jpg" alt="Atmosfera sa turnira">
+                        </div>
+                        <div class="treci">
+
+                            <img id="myImg3" src="image/21.jpg" alt="Proglašenje pobednika">
+                        </div>
+                        <div class="cetvrti">
+
+                            <img id="myImg4" src="image/27.jpg" alt="Tai Chi forma">
+                        </div>
+                        <div id="myModal" class="modal">
+
+                            <span class="close">&times;</span>
+                           
+                            <img class="modal-content" id="img01">
+                           
+                            <div id="caption"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div id="about" class="content">
+                <div id="aboutHeader" class="item3">
+                    <h2>Trofej BEOGRADSKI RATNIK 2019.</h2>
+                </div>
+                <div id="aboutContent" class="item4">
+                    <p>Ove godine po drugi se organizuje Otvoreno Prvenstvo Beograda 2018. god, iz WUSHU Kung Fu sporta,
+                        trofej Beogradski ratnik 2018. Takmičenje se odvija u SANDA borbama u Full i Light kategorijama
+                        za seniore, juniore, kadete, starije i mlađe pionire u muškoj i ženskoj konkurenciji. Takmičenje
+                        u Full Sanda borbama će se održati samo u revijalnom delu takmičenja. Wushu discipline Taiji
+                        Quan (Tai Chi Chuan) i Wing Chun će se predstaviti i u revijalnom i u takmičarskom delu
+                        takmičenja.
+                        Takmičenje će se održati 1.12.2018. god., u subotu, u sportskoj sali Osnovne škole "Ujedinjene
+                        nacije" u Beogradu, Opština Čukarica, ul. Borova br.8, Cerak , sa početkom u 10,00 h. Predviđeno
+                        je da ceo program traje do 19 časova.
+                    </p>
+                    <p>Beogradska Wushu Asocijacija je nadležni Beogradski granski sportski savez za Wushu - Kung fu
+                        sport , član i jedini zvanični zastupnik nacionalnog granskog saveza - Srpkog Kungfu Vušu Saveza
+                        i Medjunarodne evropske i svetske WUSHU federacije EWUF i IWUF . Ima za cilj da u Beogradu
+                        promoviše i razvija borilačke veštine i sportove Narodne Republike Kine. </p>
+                </div>
+            </div>
+            <div id="gallery" class="content">
+                <div id="image">
+                    <img src="image/2.jpg" alt="" id="velika">
+                    <img src="image/2.jpg" alt="" class="mala">
+                    <img src="image/28.jpg" alt="" class="mala">
+                    <img src="image/21.jpg" alt="" class="mala">
+                    <img src="image/27.jpg" alt="" class="mala">
+                    <img src="image/23.jpg" alt="" class="mala">
+                    <img src="image/26.jpg" alt="" class="mala">
+
+                </div>
+
+            </div>
+            <div id="competitors" class="content">
+                <div id="list">
+                    <h2>Lista takmičara</h2>
+                    <div id="linija">
+
+                        <div id="pretraga">
+                            <input type="text" id="myInput1" onkeyup="poImenu()" placeholder="ime" style="width:30%;">
+                            <input type="text" id="myInput2" onkeyup="poPrezimenu()" placeholder="prezime"
+                                style="width:40%;">
+                            <input type="text" id="myInput3" onkeyup="poPolu()" placeholder="pol" style="width:20%;">
+                            <input type="text" id="myInput4" onkeyup="poGodistu()" placeholder="godiste"
+                                style="width:20%;">
+                            <input type="text" id="myInput5" onkeyup="poTezini()" placeholder="tezina"
+                                style="width:20%;">
+                            <input type="text" id="myInput6" onkeyup="poKlubu()" placeholder="klub" style="width:20%;">
+                        </div>
+                    </div>
+
+                    <table id="tabelica">
+                        <tr>
+
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+            <div id="contact" class="content">
+                <div id="info" class="item2">
+                    <h3>Beogradska
+                        Wushu <br>Asocijacija</h3>
+                    <p>Prvomajska 8, Zemun <br>
+                        Beograd, Srbija
+                    </p>
+                    <p style="font-size:12px"><i>
+                            tel:064-123-52-77 <br>
+                            wushu.asocijacija@gmail.com</i>
+                    </p>
+
+                </div>
+                <div id="contactForma" class="item3">
+                    <div class="container">
+                        <form action="" class="kontejner">
+
+                            <label for="name">Ime</label>
+                            <input type="text" id="fname" name="contName" placeholder="Vaše ime..">
+
+                            <label for="email">Email</label>
+                            <input type="email" id="lname" name="email" placeholder="Vaš email..">
+
+
+                            <label for="subject">Poruka</label>
+                            <textarea id="subject" name="subject" placeholder="Vaša poruka ..."
+                                style="height:200px"></textarea>
+
+                            <input type="submit" value="Pošalji">
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div id="myModal1" class="modal1">
+
+           
+            <div class="modal-content1">
+                <div class="modal-header1">
+                    <span class="close1">&times;</span>
+                    <h2>Prijava takmičara</h2>
+                </div>
+                <div class="modal-body1">
+                    <form class="formKlasa">
+                        <table id="regPrijava">
+                            <tr>
+                                <td><label for="name">Ime</label></td>
+                                <td><label for="name">Prezime</label></td>
+                            </tr>
+                            <tr class="donjaLinija">
+                                <td><input type="text" id="ime" placeholder="" required></td>
+                                <td><input type="text" id="prezime" placeholder="" required></td>
+                            </tr>
+                           
+                            <tr>
+                                <td>
+                                    <label for="age">Godina rođenja</label>
+                                </td>
+                                <td>
+                                    <label for="kg">Težina (kg)</label>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="number" id="godiste" placeholder="" required>
+                                </td>
+                                <td>
+                                    <input type="number" id="tezina" placeholder="" required>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                    <td>
+                                         <span>Pol takmičara</span>   
+                                        <select name="" id="pol" required>
+                                                <option value="">Izaberite ....</option>
+                                                <option value="Muško">Muško</option>
+                                                <option value="Žensko">Žensko</option>
+                                            </select>
+                                            
+                                        </td>
+                                <td>
+                                    <label for="text">Klub</label>
+                                    <input type="text" id="klub" placeholder="" required>
+                                </td>
+
+                            </tr>
+                            
+                        </table>
+
+                        
+                        <button onclick="novaPrijava()">Pošalji</button>
+                    </form>
+                </div>
+                <div class="modal-footer1">
+                    <h3>Želimo vam puno sreće </h3>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <script src="js/script2.0.js"></script>
+</body>
+
+</html>
