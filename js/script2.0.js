@@ -30,19 +30,19 @@ class Takmicar {
 
     
 }
-//document.getElementById('prijavaBtn').addEventListener('click', novaPrijava);
+
 
 const upisaniTakmicari = Array.of(
-    new Takmicar('Miloš', 'Bukvić', 'Muski', 1987, 95, 'REDHIT'),
-    new Takmicar('Pavle', 'Trajković', 'Muski', 2001, 60, 'REDHIT'),
-    new Takmicar('Miloš', 'Lazarević', 'Muski', 1992, 80, 'KALUĐERI'),
-    new Takmicar('Stefan', 'Savić', 'Muski', 2009, 45, 'BAK'),
-    new Takmicar('Tara', 'Trajković', 'Zenski', 2008, 33, 'BAK'),
-    new Takmicar('Boško', 'Babić', 'Muski', 1999, 72, 'KALUĐERI'),
-    new Takmicar('Aleksandara', 'Mišković', 'Zenski', 2000, 55, 'HILL'),
-    new Takmicar('Katarina', 'Novakovic', 'Zenski', 1998, 60, 'BAK'),
-    new Takmicar('Petar', 'Lazic', 'Muski', 2005, 50, 'KK BEOGRAD'),
-    new Takmicar('Lazar', 'Mirkov', 'Muski', 2000, 55, 'KK BEOGRAD')
+    new Takmicar('Miloš', 'Bukvić', 'Muško', 1987, 95, 'REDHIT'),
+    new Takmicar('Pavle', 'Trajković', 'Muško', 2001, 60, 'REDHIT'),
+    new Takmicar('Miloš', 'Lazarević', 'Muško', 1992, 80, 'KALUĐERI'),
+    new Takmicar('Stefan', 'Savić', 'Muško', 2009, 45, 'BAK'),
+    new Takmicar('Tara', 'Trajković', 'Žensko', 2008, 33, 'BAK'),
+    new Takmicar('Boško', 'Babić', 'Muško', 1999, 72, 'KALUĐERI'),
+    new Takmicar('Aleksandara', 'Mišković', 'Žensko', 2000, 55, 'HILL'),
+    new Takmicar('Katarina', 'Novakovic', 'Žensko', 1998, 60, 'BAK'),
+    new Takmicar('Petar', 'Lazic', 'Muško', 2005, 50, 'KK BEOGRAD'),
+    new Takmicar('Lazar', 'Mirkov', 'Muško', 2000, 55, 'KK BEOGRAD')
 );
 
 
@@ -68,19 +68,26 @@ const godiste = document.getElementById('godiste');
 const tezina = document.getElementById('tezina');
 const klub = document.getElementById('klub');
 
-// Funkcija za upisivanje novog takmicara u niz upisaniTakmicari
+
 function novaPrijava() {   
     const noviTakmicar = new Takmicar (ime.value, prezime.value, pol.value, godiste.value, tezina.value, klub.value);
     upisaniTakmicari.unshift(noviTakmicar);
-    // cistimo inpute
+   
+
     ime.value = ''; 
     prezime.value = '';
     pol.value = '';
     godiste.value = '';
     tezina.value = '';
-    klub.value = '';
-    // poziv funkcije ispis u tabeli
+    klub.value = ''; 
+    
+ 
     upisTabela()
+    upis();
+    alert("Takmičar je uspešno prijavljen!");
+    
+  
+  
 };
 
 // funkcija za ispis u tabeli
@@ -97,15 +104,19 @@ const upisTabela = () => {
     });
     item += '</table>';
     document.getElementById('tabelica').innerHTML = item;
+    
 
-    //$('#tabelica').append(item); 
-    //$('#tabelica').show();
+   
 };
 
-// pozivamo f-ju ispis u tabeli
 upisTabela()
 
-
+ime.value = ''; 
+    prezime.value = '';
+    pol.value = '';
+    godiste.value = '';
+    tezina.value = '';
+    klub.value = ''; 
 
 function poImenu() {
 
@@ -298,3 +309,18 @@ function prijava () {
          modal.style.display = "none";
      }
  }
+ function upis() {
+ let upisServer = JSON.stringify(upisaniTakmicari);
+ localStorage.setItem('upisaniTakmicari', JSON.stringify(upisServer));
+ } 
+
+ const kontaktIme = document.getElementById('name');
+ const kontakEmail = document.getElementById('email');
+ const kontaktPoruka = document.getElementById('subject');
+ 
+ function upisKontakt() {
+    const kontaktInfo = [kontaktIme.value, kontakEmail.value, kontaktPoruka.value];
+    let porukaServer = JSON.stringify(kontaktInfo);
+    localStorage.setItem('kontaktinfo', JSON.stringify(porukaServer));
+} 
+

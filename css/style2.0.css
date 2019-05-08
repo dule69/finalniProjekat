@@ -6,37 +6,28 @@ body {
     background-repeat:no-repeat;
     background-size: cover;
     background-position:  10% 10%;
-    
+    box-sizing: content-box;
+    margin: auto auto;
+   
 }
 
 #header {
     display: grid;
     box-shadow: 0px 20px 50px 20px rgba(0,0,0,0.75);
-    grid-template-columns: 100px 500px auto auto;
+    grid-template-columns: 6vw 40vw auto auto;
     background-color: red;
     background-position:  left top;
     width: 100%;
-    height: 100px;
+    height: 6vw;
    
     
 }
 #logo {
-    /*border: 2px solid grey;*/
+    
     align-content: center;
 
 }
-#text {
-    /*border: 2px solid grey;*/
 
-}
-#prijava {
-    /*border: 2px solid grey;*/
-
-}
-#himna {
-    /*border: 2px solid grey;*/
-
-}
 #logoSlika {
     margin: 15px;
     border-radius: 10px;
@@ -46,27 +37,31 @@ body {
 }
 #prijava button {
     background-color: white;
-    border-radius: 10px;
-    padding: 10px 24px;
-    font-size: 15px;
+    border-radius: 0.5vw;
+    padding: 0.7vw 1vw;
+    font-size: 1vw;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     position: relative;
-    top: 50%;
+    top: 45%;
     left: 60%;
+    cursor: pointer;
 }
 #himna audio {
-    margin-top: -35px;
-    margin-left: 30%;
+
+    margin-top: -3vw;
+    margin-left: 40%;
+    max-width: 16vw;
+    max-height: 2.5vw
     
 
 }
 #himna > p {
-    margin-top:5px;
+   margin-top:0.1vw;
     margin-left: 70%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: italic;
-    font-size: 30px;
+    font-size: 2vw;
     color: rgb(248, 242, 242);
     
       
@@ -78,7 +73,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: italic;
     font-stretch: expanded;
-    font-size: 35px;
+    font-size: 2vw;
     color: white;
 }
 #text p:nth-child(2) {
@@ -87,20 +82,29 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     text-shadow: 10px 10px 20px rgba(0,0,0,0.75);
     font-weight: bold;
-    font-size: 45px;
+    font-size: 2.7vw;
     color: white;
     
+}
+#myBtn1:hover {
+   
+  
+    border-bottom: 0.7vw solid rgb(92, 92, 185);
+    color: #023cfa;
+  
+ 
+}
+body #menu {
+   margin-left: 22vw;
 }
 
 #menu {
     top: 3%;
     background-color: rgba(223, 196, 196, 0.4);
     border-radius: 20px;
-    width: 800px;
-    height: 600px;
     position: relative;
-    margin-left: 270px;
-    margin-right: 0;
+    width: 55vw;
+    height: 40vw;
     text-align: center;
     
     
@@ -110,8 +114,6 @@ ul {
     position: relative;
     right: 4%;
     top: 0%;
-
-    
   
 }
 li {
@@ -119,16 +121,14 @@ li {
     display: inline;
     
     position: relative;
-  
- 
- 
+
 }
 
 li a {
-   /* background-color: #555;*/
+  
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 17px;
+    font-size: 1vw;
     text-decoration: none;
     text-transform: uppercase;
     color: white;
@@ -153,8 +153,9 @@ a {
 .content {
     display: grid;
     background-color: rgba(223, 196, 196, 0.7);
-    width: 800px;
-    height: 550px;
+    
+    width: 100%;
+    height: 90%;
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -179,8 +180,8 @@ a {
     'item4 item4 item4 item4'
     'item4 item4 item4 item4'
     'item4 item4 item4 item4';
-    grid-gap: 30px;
-    padding:30px;
+    grid-gap: 1.5vw;
+    padding: 1.5vw;
     
 }
 #home > div {
@@ -188,7 +189,7 @@ a {
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 20px 20px 50px -20px rgba(0,0,0,1);
     text-align: left;
-    padding: 20px 20px;
+    padding: 1.5vw 1.5vw;
     font-size: 15px;
     font-weight: normal;
     word-wrap: break-word;
@@ -203,13 +204,34 @@ a {
    
     grid-area: item4; 
 }
+#left {
+    width: 25vw;
+    border-top: 1.3vw solid rgb(107, 84, 235);
+    
+}
+#right {
+    width: 25vw;
+    border-top: 1.3vw solid rgb(107, 84, 235);
+    
+    
+  
+}
+video {
+    width: 100%;
+}
+#bottom {
+    max-width: 52vw;
+    border-top: 1.3vw solid red;
+}
 
 #bottom > div {
+    
     display: flex;
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 20px 20px 50px -20px rgba(0,0,0,1);
     text-align: left;
-   
+    width: 100%;
+    margin-right: -2vw;
     font-size: 15px;
     font-weight: bold;
     word-wrap: break-word;
@@ -221,10 +243,10 @@ a {
 #malaGalerija {
     display: flex;
     flex-direction: row;
-    
+    margin-right: 1vw;
     background-color: rgba(255, 255, 255, 1);
     width: 100%;
-    height: 150px;
+    height: 12vw;
     align-items: center;
     
 
@@ -233,8 +255,8 @@ a {
 
 #malaGalerija  img {
     float: left;
-    margin: 5px;
-    width: 150px;
+    margin: 0.8vw;
+    width: 10.5vw;
     height: auto;
   
     border-radius: 5px;
@@ -250,6 +272,7 @@ a {
 }
 .prvi:hover {
    opacity: 0.7;
+   border: 0.5vw solid red;
 }
 .drugi{
     cursor: pointer;
@@ -257,13 +280,16 @@ a {
 }
 .drugi:hover {
    opacity: 0.7; 
+   border: 0.5vw solid red;
 }
 .treci {
     cursor: pointer;
     transition: 0.3s;
+
 }
 .treci:hover {
    opacity: 0.7; 
+   border: 0.5vw solid red;
 }
 .cetvrti {
     cursor: pointer;
@@ -271,6 +297,7 @@ a {
 }
 .cetvrti:hover {
    opacity: 0.7; 
+   border: 0.5vw solid red;
 }
 
 .modal {
@@ -349,8 +376,7 @@ a {
   }
 #about {
     grid-template-areas:
-    /*'item1 item1 item1 item1'*/
-    
+        
     'item3 item3 item3 item3'
     'item4 item4 item4 item4'
     'item4 item4 item4 item4'
@@ -364,6 +390,8 @@ a {
 }
 
 #about > div {
+   
+    border-top: 1.3vw solid red;
     display: block;
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 20px 20px 50px -20px rgba(0,0,0,1);
@@ -379,13 +407,14 @@ a {
 }
 #about div:first-child   {
     display: block;
-       
+    border-top: 20px solid rgb(107, 84, 235);
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 20px 20px 50px -20px rgba(0,0,0,1);
     text-align: center;
     min-width: auto;
     min-height: auto; 
     padding: 0px;
+    font-size: 1.5vw;
     
     font-weight: bold;
     word-wrap: break-word;
@@ -394,6 +423,7 @@ a {
 }
 
 #gallery > div {
+    border-top: 1.3vw solid rgb(107, 84, 235);
     display: block;
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 20px 20px 50px -20px rgba(0,0,0,1);
@@ -403,11 +433,13 @@ a {
     font-weight: bold;
     word-wrap: break-word;
     margin: 30px;
+    border-bottom: 0.8vw solid red;
    
     
     color: #555;
 }
 #competitors > div {
+    border-top: 1.3vw solid red;
     display: block;
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 20px 20px 50px -20px rgba(0,0,0,1);
@@ -437,26 +469,37 @@ a {
 
 
 #velika {
-    width: 80%;
-    height: 60%;
-    border: 5px solid rgb(86, 52, 240);
-    margin: 20px 60px 20px 60px;
+    width: 70%;
+    height: auto;
+    border: 20px solid rgb(180, 180, 180);
+    margin: 1vw 5vw 1.5vw 7vw;
     border-radius: 20px;
+    padding: 1vw;
     
 
 }
 .mala {
     width: auto;
-    height: 70px;
-    margin: 2px;
-    border: 3px solid rgb(86, 52, 240);
+    height: 4.5vw;
+    margin: 0.3vw;
+    
+    
+    border: 3px solid rgb(180, 180, 180);
     border-radius: 5px;
     opacity: 0.7;
  
 }
 
 .mala:hover {
+    height: 6.5vw;
     opacity: 1.0;
+    border: 0.3vw solid red;
+    padding: 0.3vw;
+    margin: auto;
+    transition-duration: 1s;
+    
+  
+    
 }
 
 #contact {
@@ -470,16 +513,16 @@ a {
     'item2 item3 item3 item3'
     'item2 item3 item3 item3';
     grid-gap: 30px;
-    padding:30px;
+    padding: 30px;
 }
 #contact div:first-child {
-    width: 230px;
+    width: 15vw;
     padding: 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 #contact div:nth-child(2) {
-    width: 480px;
+    width: 35vw;
 }
 #centar {
     
@@ -508,14 +551,19 @@ th {
   }
 #linija {
     display: inline-block;
-    width: 600px;
+    width: 90%;
     border: 10px solid rgb(184, 179, 179);
-    margin-left: 40px;
+    margin-left: 3vw;
     height: auto;
 
 }
 #linija input {
     margin: 0;
+    padding: 1vw;
+    font-size: 1vw;
+}
+#linija::placeholder {
+    font-size: 0.5vw;
 }
 
 #pretraga {
@@ -523,14 +571,15 @@ th {
     display: flex;
     border: 5px solid rgb(241, 238, 238);
     flex-direction: row;
+    
     overflow: hidden;
  
     
 }
 
 #tabelica {
-    width: 600px;
-    margin-left: 40px;
+    width: 90%;
+    margin-left: 3vw;
    
 }
 
@@ -544,38 +593,49 @@ th {
     margin-left: 50px;
 }
 #list h2 {
-    margin-left: 40px;
+    margin-left: 3vw;
 }
 #info  {
-    border-top: 20px solid gray;
-    border-bottom: 10px solid gray;
+    border-top: 1.3vw solid rgb(107, 84, 235);
+    border-bottom: 0.8vw solid red;
     padding-left: 10px;
 }
 
 
 input, select, textarea {
     width: 90%; 
-    padding: 10px;  
+    padding: 2vw;  
     border: 1px solid #ccc; 
     border-radius: 4px;
     box-sizing: border-box;
-    margin-top: 6px; 
-    margin-left: 20px;
-    margin-bottom: 16px;
+    margin-top: 0.5vw; 
+    margin-left: 1.2vw;
+    margin-bottom: 0.1vw;
+    font-size: 1.5vw;
    
 }
+input::placeholder {
+    color: rgb(209, 205, 205);
+    font-size: 1vw;
+}
+textarea::placeholder {
+    color: rgb(209, 205, 205);
+    font-size: 1vw;
+}
 #contactForma label {
-    margin-left: 20px;
+    margin-left: 1.5vw;
 }
   
   
 input[type=submit] {
     background-color: rgb(252, 21, 5);
     color: white;
-    padding: 12px 20px;
+    padding: 0.5vw 1vw;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 1.2vw;
+    height: 3vw;
 }
   
   
@@ -585,7 +645,10 @@ input[type=submit]:hover {
   
  
 .kontejner {
-    width: 220%;
+    margin-top: 0.5vw;
+    margin-left: 0.5vw;
+    width: 32vw;
+    height: 30vw;
     border-radius: 5px;
     background-color: #c2bfbe;
     /*padding: 20px;*/
@@ -721,6 +784,15 @@ input {
     box-sizing: border-box;
     border: none;
     border-bottom: 3px solid gray;
+}
+.formKlasa  select {
+    width: 90%;
+    padding: 12px;
+    margin: 5px 5px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 3px solid gray;
+    font-size: 1vw;
 }
 
 .formKlasa  button {
